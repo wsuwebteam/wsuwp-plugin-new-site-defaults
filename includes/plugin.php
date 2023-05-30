@@ -29,10 +29,11 @@ class Plugin {
 
 	}
 
+
 	public static function init() {
 
-		// require_once __DIR__ . '/post-type-museum-exhibit.php';
-		// require_once __DIR__ . '/content-migrations.php';
+		require_once __DIR__ . '/set-new-site-defaults.php';
+
 	}
 
 
@@ -41,6 +42,8 @@ class Plugin {
 		require_once self::get( 'dir' ) . '/classes/class-' . $class_name . '.php';
 
 	}
+
+
 }
 
 Plugin::init();
